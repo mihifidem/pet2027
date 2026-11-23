@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'accounts',
+    'petadvisor',
 ]
 AUTH_USER_MODEL = "accounts.User"
 MIDDLEWARE = [
