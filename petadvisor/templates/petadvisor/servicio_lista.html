@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PetAdvisor · Servicios</title>
+</head>
+<body>
+    <h1>Servicios para animales</h1>
+
+    {% for servicio in servicios %}
+        <article>
+            <h2>{{ servicio.nombre }}</h2>
+            <p>{{ servicio.descripcion }}</p>
+            <p>{{ servicio.municipio }} ({{ servicio.provincia }})</p>
+            <p>Categoría: {{ servicio.categoria.nombre }}</p>
+            <p>Contacto: {{ servicio.contacto_publico }}</p>
+
+
+        </article>
+    {% empty %}
+        <p>Todavía no hay servicios publicados.</p>
+    {% endfor %}
+</body>
+</html>
