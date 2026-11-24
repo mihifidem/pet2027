@@ -2,6 +2,12 @@
 __pycache__/
 *.py[cod]
 *$py.class
+.Python
+
+# Python build artifacts
+build/
+dist/
+*.egg-info/
 
 # Virtual environments
 .venv/
@@ -17,14 +23,20 @@ ENV/
 # Django
 db.sqlite3
 db.sqlite3-journal
-/media/
-/staticfiles/
+db.sqlite3-wal
+db.sqlite3-shm
+media/
+staticfiles/
 
 # Test and coverage artifacts
 .coverage
 .coverage.*
 htmlcov/
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
 
 # Logs
 *.log
