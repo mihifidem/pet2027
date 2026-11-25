@@ -6,4 +6,5 @@ app_name = "petadvisor"
 
 urlpatterns = [
     path("", views.servicio_lista, name="servicio_lista"),
+    path("<int:pk>/", views.servicio_detalle, name="servicio_detalle"),
 ]

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ servicio.nombre }} · PetAdvisor</title>
+</head>
+<body>
+    <p><a href="{% url 'petadvisor:servicio_lista' %}">← Volver al listado</a></p>
+
+    <h1>{{ servicio.nombre }}</h1>
+    <p>Categoría: {{ servicio.categoria.nombre }}</p>
+    <p>{{ servicio.descripcion }}</p>
+    <p>{{ servicio.municipio }} ({{ servicio.provincia }})</p>
+    <p>Contacto: {{ servicio.contacto_publico }}</p>
+
+    <h2>Valoraciones</h2>
+    {% for valoracion in valoraciones %}
+        <article>
+            <p><strong>{{ valoracion.autor.username }}</strong> · {{ valoracion.puntuacion }}/5</p>
+            <p>{{ valoracion.comentario }}</p>
+            <p>{{ valoracion.fecha|date:"d/m/Y" }}</p>
+        </article>
+    {% empty %}
+        <p>Todavía no hay valoraciones.</p>
+    {% endfor %}
+</body>
+</html>
