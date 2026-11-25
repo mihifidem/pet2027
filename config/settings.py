@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'core',
     'accounts',
     'petadvisor',
+    'idoneo.apps.IdoneoConfig',
 ]
 AUTH_USER_MODEL = "accounts.User"
 MIDDLEWARE = [
