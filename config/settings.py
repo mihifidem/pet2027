@@ -39,9 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'accounts',
-    'petadvisor',
-    'idoneo.apps.IdoneoConfig',
+    "apps.inventario.apps.InventarioConfig",
+    "apps.adopciones.apps.AdopcionesConfig",
+    "apps.protectora.apps.ProtectoraConfig",
+    "apps.auditoria.apps.AuditoriaConfig",
+    "apps.idoneo.apps.IdoneoConfig",
+    "apps.petadvisor.apps.PetadvisorConfig"
+ 
 ]
+
 AUTH_USER_MODEL = "accounts.User"
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

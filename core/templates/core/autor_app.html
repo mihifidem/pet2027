@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{ autor.nombre }}</h1>
+    <h2>{{ autor.email }}</h2>
+ 
+    <a href="{% url 'core:autores' %}">Volver a Autores</a>
+    <hr>
+    {% include 'core/libros_app.html' with libros=libros_autor %}
+
+</body>
+</html>
